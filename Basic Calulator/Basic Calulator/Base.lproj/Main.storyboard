@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Basic_Calulator" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" misplaced="YES" restorationIdentifier="sayiText" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Birinci Sayıyı Giriniz" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="W2I-D1-wdO">
+                                <rect key="frame" x="65" y="165" width="245" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="11"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UIL-Ba-bwp">
+                                <rect key="frame" x="0.0" y="20" width="377" height="44"/>
+                                <items>
+                                    <navigationItem title=" Basic Calculator" id="Nbc-vE-JpA"/>
+                                </items>
+                            </navigationBar>
+                            <textField opaque="NO" contentMode="scaleToFill" misplaced="YES" restorationIdentifier="sayiText2" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="İkinci Sayıyı Giriniz" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7yz-d0-jbz">
+                                <rect key="frame" x="65" y="241" width="245" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="11"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" restorationIdentifier="artiButton" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KOd-TI-cL1">
+                                <rect key="frame" x="97" y="203" width="30" height="30"/>
+                                <state key="normal" title="+"/>
+                                <connections>
+                                    <action selector="toplaButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hxb-fS-YC4"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" restorationIdentifier="eksiButton" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5eZ-7J-nB7">
+                                <rect key="frame" x="145" y="203" width="30" height="30"/>
+                                <state key="normal" title="-"/>
+                                <connections>
+                                    <action selector="cikarButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="3Qp-B2-40T"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" restorationIdentifier="bolumButton" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qgF-NP-uqf">
+                                <rect key="frame" x="247" y="203" width="30" height="30"/>
+                                <state key="normal" title="/"/>
+                                <connections>
+                                    <action selector="bolButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Ihq-Kg-5pX"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" restorationIdentifier="carpiButton" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N3v-gj-0Hu">
+                                <rect key="frame" x="195" y="203" width="30" height="30"/>
+                                <state key="normal" title="*"/>
+                                <connections>
+                                    <action selector="carpButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="1Ge-2n-fwa"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Sonuç" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jf2-fq-MTS">
+                                <rect key="frame" x="163" y="279" width="49" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="7yz-d0-jbz" firstAttribute="trailing" secondItem="W2I-D1-wdO" secondAttribute="trailing" id="5Aj-R6-ppi"/>
+                            <constraint firstItem="UIL-Ba-bwp" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="6OS-fc-vCB"/>
+                            <constraint firstItem="7yz-d0-jbz" firstAttribute="centerX" secondItem="jf2-fq-MTS" secondAttribute="centerX" id="7sS-lM-ffX"/>
+                            <constraint firstItem="7yz-d0-jbz" firstAttribute="top" secondItem="KOd-TI-cL1" secondAttribute="bottom" constant="8" symbolic="YES" id="9ie-L1-y9j"/>
+                            <constraint firstItem="KOd-TI-cL1" firstAttribute="baseline" secondItem="5eZ-7J-nB7" secondAttribute="baseline" id="Awk-RI-hls"/>
+                            <constraint firstItem="KOd-TI-cL1" firstAttribute="top" secondItem="W2I-D1-wdO" secondAttribute="bottom" constant="8" symbolic="YES" id="Dh8-P0-qHa"/>
+                            <constraint firstItem="5eZ-7J-nB7" firstAttribute="leading" secondItem="KOd-TI-cL1" secondAttribute="trailing" constant="18" id="EMJ-H4-9qz"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="W2I-D1-wdO" secondAttribute="trailing" constant="64" id="Igi-zG-zhe"/>
+                            <constraint firstItem="7yz-d0-jbz" firstAttribute="leading" secondItem="W2I-D1-wdO" secondAttribute="leading" id="KQH-lv-bqc"/>
+                            <constraint firstItem="W2I-D1-wdO" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="106" id="LNN-LI-LZX"/>
+                            <constraint firstItem="5eZ-7J-nB7" firstAttribute="baseline" secondItem="N3v-gj-0Hu" secondAttribute="baseline" id="OPT-ya-edh"/>
+                            <constraint firstItem="W2I-D1-wdO" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="66" id="QMV-lF-0Ty"/>
+                            <constraint firstItem="qgF-NP-uqf" firstAttribute="leading" secondItem="N3v-gj-0Hu" secondAttribute="trailing" constant="22" id="c9B-M4-iIx"/>
+                            <constraint firstItem="jf2-fq-MTS" firstAttribute="top" secondItem="7yz-d0-jbz" secondAttribute="bottom" constant="8" symbolic="YES" id="d62-fS-892"/>
+                            <constraint firstItem="N3v-gj-0Hu" firstAttribute="leading" secondItem="5eZ-7J-nB7" secondAttribute="trailing" constant="20" id="duV-M2-JFD"/>
+                            <constraint firstItem="UIL-Ba-bwp" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="hPV-su-gVQ"/>
+                            <constraint firstItem="KOd-TI-cL1" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="97" id="qBK-Wb-LvQ"/>
+                            <constraint firstItem="N3v-gj-0Hu" firstAttribute="baseline" secondItem="qgF-NP-uqf" secondAttribute="baseline" id="tpO-iW-Sau"/>
+                            <constraint firstItem="UIL-Ba-bwp" firstAttribute="centerX" secondItem="W2I-D1-wdO" secondAttribute="centerX" id="yp3-l4-PZv"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="sayiText" destination="W2I-D1-wdO" id="L9q-P8-5rw"/>
+                        <outlet property="sayiText2" destination="7yz-d0-jbz" id="5kO-Y2-2tc"/>
+                        <outlet property="sonucLabel" destination="jf2-fq-MTS" id="h76-Ry-hXH"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="133.5832083958021"/>
+        </scene>
+    </scenes>
+</document>
